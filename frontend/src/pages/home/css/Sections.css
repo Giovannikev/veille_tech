@@ -1,0 +1,27 @@
+.sections {
+    width: 80%;
+    margin: 24px auto;
+}
+
+.site-background {
+    background-color: #f3f3f3;
+}
+
+.section {
+    border-radius: 8px;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.section p {
+    font-size: 1rem;
+    color: #666;
+}

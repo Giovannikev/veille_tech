@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% for menu in menus %}
+    <p>{{ menu.name }} - {{ menu.price }} €</p>
+    <a href="{% url 'menu-update' menu.pk %}">Modifier</a>
+    <a href="{% url 'menu-delete' menu.pk %}">Supprimer</a>
+  {% endfor %}
+  <a href="{% url 'menu-create' %}">Ajouter un nouveau menu</a>
+{% endblock %}

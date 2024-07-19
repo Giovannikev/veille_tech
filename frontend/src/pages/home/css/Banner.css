@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;600&display=swap');
+
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, var(--dark-blue), #1b135e, #182175);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    overflow: hidden;
+    z-index: 0;
+
+}
+
+.banner::before {
+    z-index: 0;
+
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 2px, transparent 1px);
+    background-size: 30px 30px;
+    animation: starryNight 60s linear infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+@keyframes starryNight {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.content {
+    text-align: center;
+    z-index: 1;
+    padding: 2rem;
+    max-width: 800px;
+}
+
+.banner__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(8rem, 8vw, 5rem);
+    font-weight: 300;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    color: #f0f0f0;
+}
+
+.content p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    margin-bottom: 2rem;
+    color: #d0d0d0;
+}
+
+.sm-button {
+    border-radius: 5px;
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+.button-bg {
+    background-color: var(--primary);
+    color: #f8f8f8;
+    transition: all 0.3s ease;
+    border: 1px solid var(--white);
+
+
+}
+
+.button-bg:hover {
+    border: 1px solid var(--primary);
+    background-color: var(--white);
+    color: #040e33;
+
+}
+
+.cta-button {
+    margin: 5px 10px;
+
+    background-color: transparent;
+    color: #f8f8f8;
+    transition: all 0.3s ease;
+    border: 1px solid #f8f8f8;
+}
+
+.cta-button-outlined {
+    margin: 5px 10px;
+
+    background-color: #f8f8f8;
+    color: #040e33;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+
+}
+
+.cta-button-outlined:hover {
+    background-color: #040e33;
+    color: #f8f8f8;
+}
+
+.cta-button:hover {
+    background-color: #f8f8f8;
+    color: #0a0a0a;
+}
+
+.decorative-line {
+    width: 50px;
+    height: 1px;
+    background-color: #f8f8f8;
+    margin: 2rem auto;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    cursor: pointer;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0) translateX(-50%);
+    }
+
+    40% {
+        transform: translateY(-20px) translateX(-50%);
+    }
+
+    60% {
+        transform: translateY(-10px) translateX(-50%);
+    }
+}
+
+.scroll-indicator::before {
+    content: '↓';
+    color: #f8f8f8;
+    font-size: 2rem;
+}

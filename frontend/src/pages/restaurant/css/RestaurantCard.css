@@ -1,0 +1,133 @@
+.restaurant-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+
+}
+
+.background-color {
+    background-color: #f3f3f3;
+}
+
+.list-header {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 5px 0;
+}
+
+.restaurant-card {
+    background-color: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    height: 380px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.restaurant-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.restaurant-card-info {
+    padding: 20px;
+}
+
+.restaurant-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.restaurant-card-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: grey;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.restaurant-card-rating {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    border-radius: 20px;
+}
+
+.star {
+    font-size: 1.2rem;
+    color: gold;
+    margin-right: 5px;
+}
+
+.restaurant-card-description {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.restaurant-card-location {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.location-icon {
+    margin-right: 5px;
+}
+
+.restaurant-card-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.btn-card {
+    flex: 1;
+    padding: 5px 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-card-primary {
+    background-color: var(--secondary);
+    color: var(--white);
+}
+
+.btn-card-secondary {
+    background-color: var(--white);
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+}
+
+.btn-card:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    .restaurant-list {
+        grid-template-columns: 1fr;
+    }
+}

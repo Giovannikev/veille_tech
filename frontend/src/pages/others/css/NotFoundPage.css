@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap');
+
+.not-found-page {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f2ff;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.not-found-page-container {
+    max-width: 800px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 40px;
+    margin: 100px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.not-found-page-container h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: var(--secondary);
+    margin-bottom: 20px;
+}
+
+.not-found-page-container p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.error-code {
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.not-found-menu-item {
+    font-style: italic;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.not-found-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--secondary);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.not-found-btn:hover {
+    background-color: #b8960c;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.utensils {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    .not-found-page-container {
+        margin: 10px;
+
+        padding: 20px;
+    }
+
+    .not-found-page-container h1 {
+        font-size: 2rem;
+    }
+
+    .error-code {
+        font-size: 4rem;
+    }
+
+    .not-found-page-container p {
+        font-size: 1rem;
+    }
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.utensils {
+    animation: wiggle 2s infinite;
+    display: inline-block;
+}

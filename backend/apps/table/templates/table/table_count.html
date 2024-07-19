@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comptage des Tables</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Comptage des Tables</h1>
+    <div class="container">
+
+        <table>
+        <thead>
+            <tr>
+                <th>Type de Table</th>
+                <th>Statut</th>
+                <th>Nombre Total de Places</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for count in table_counts %}
+                <tr>
+                    <td>{{ count.type_table }}</td>
+                    <td>{{ count.statut }}</td>
+                    <td>{{ count.sum_nb_place }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    </div>
+</body>
+</html>

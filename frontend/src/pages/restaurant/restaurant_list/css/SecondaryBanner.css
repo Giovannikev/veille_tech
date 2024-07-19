@@ -1,0 +1,46 @@
+.restaurant-form {
+    padding-top: 100px;
+}
+
+.secondary-banner-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.secondary-banner {
+    background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.secondary-banner-content {
+    background-color: rgba(26, 42, 58, 0.836);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .secondary-banner {
+        height: 300px;
+    }
+
+    .secondary-banner-content h1 {
+        font-size: 2rem;
+    }
+
+    .searchbar-container {
+        flex-direction: column;
+        margin: -1rem 1rem 2rem;
+    }
+
+    .searchbar-input,
+    .searchbar-button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <section>
+    <h2>Bienvenue sur Ikaly</h2>
+    <p>C'est la page d'accueil du site web.</p>
+    <li>
+      <a href="{% url 'menu-list' %}">Liste menu</a>
+    </li>
+    <li>
+      <a href="{% url 'dish-list' %}">Liste plat</a>
+    </li>
+    <li>
+      <a href="{% url 'menu-create' %}">Creer menu</a>
+    </li>
+    <li>
+      <a href="{% url 'dish-create' %}">Creer plat</a>
+    </li>
+  </section>
+{% endblock %}

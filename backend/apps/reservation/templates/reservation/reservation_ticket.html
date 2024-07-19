@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+  <style>
+    .card-img-top {
+      height: 460px;
+      width: 460px;
+    }
+  </style>
+
+  <h2>Felicitation votre reservation a été confirmée !</h2>
+  <p>{{ reservation.restaurant }} vous attend pour le {{ reservation.reservation_date }}</p>
+  <h3>Voici votre ticket</h3>
+  <img src="{{ reservation.qr_code.url }}" class="card-img-top" alt="Image de {{ reservation.restaurant.name }}" />
+  <a href="{% url 'reservation-list' %}" class="btn btn-primary btn-outlined">Ok</a>
+{% endblock %}

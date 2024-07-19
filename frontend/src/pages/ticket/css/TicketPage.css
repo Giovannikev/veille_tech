@@ -1,0 +1,129 @@
+.ticket-container {
+    font-family: 'Lato', sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 50px;
+}
+
+.ticket-page {
+    text-align: center;
+}
+
+.button-ticket {
+    margin: 0 auto;
+}
+
+.ticket {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 100%;
+}
+
+.ticket-top {
+    display: flex;
+}
+
+.ticket-left {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+
+.ticket-qr-code {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+}
+
+.ticket-right {
+    flex: 2;
+}
+
+.ticket-reservation-info-container {
+    padding: 20px;
+
+}
+
+.ticket-cover-image {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.ticket-restaurant-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.ticket-reservation-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.ticket-detail-item {
+    font-size: 14px;
+    color: #666;
+}
+
+.ticket-detail-item strong {
+    display: block;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+.ticket-restaurant-info {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-top: 1px dashed #ddd;
+}
+
+.ticket-info-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.ticket-info-item {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 480px) {
+    .ticket-container {
+        padding-top: 50px;
+    }
+
+    .ticket-top {
+        flex-direction: column;
+    }
+
+    .ticket-left {
+        padding: 30px;
+    }
+
+    .ticket-qr-code {
+        max-width: 150px;
+    }
+
+    .ticket-reservation-details {
+        grid-template-columns: 1fr;
+    }
+}

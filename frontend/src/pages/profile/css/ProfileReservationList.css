@@ -1,0 +1,15 @@
+.reservations {
+    flex: 2;
+}
+
+.reservation-container {
+    margin: 20px;
+}
+
+.searchbar-reservation-container {
+    padding: 10px 40px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--secondary), #ffa76d 100%);
+    margin: 0;
+    width: 100%;
+}

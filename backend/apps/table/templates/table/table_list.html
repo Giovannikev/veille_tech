@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liste des Tables</title>
+</head>
+<body>
+    <p>Ajouter des Tables</p>
+        <a href="{% url 'table_create' %}">Ajouter</a>
+    <p>Voir les compte <a href="{% url 'table_count' %}"> ici </a></p>
+    <h1>Liste des Tables</h1>
+
+        {% for table in tables %}
+            <p>{{ table }} -</p>
+                <a href="{% url 'table_edit' table.pk %}">Modifier</a>
+                <a href="{% url 'table-del' table.pk %}">Supprimer</a>
+        {% endfor %}
+
+</body>
+</html>

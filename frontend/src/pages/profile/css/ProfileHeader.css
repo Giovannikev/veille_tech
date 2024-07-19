@@ -1,0 +1,33 @@
+.profile-cover-photo {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.profile-section {
+    display: flex;
+    align-items: flex-end;
+    margin-top: -75px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid var(--white);
+    object-fit: cover;
+}
+
+.user-name {
+    margin-left: 20px;
+    padding-bottom: 10px;
+}
+
+.profile-name {
+    font-size: 2.5rem;
+    color: var(--primary);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}

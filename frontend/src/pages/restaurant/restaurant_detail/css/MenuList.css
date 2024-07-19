@@ -1,0 +1,77 @@
+.carousel-menu {
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.no-menu {
+    margin: 100px auto;
+    width: 400px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: grey;
+    padding: 50px;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.menus {
+    width: 85%;
+    margin: 20px auto;
+
+}
+
+.menu-title {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.menus h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-left: 10px;
+    color: var(--primary);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+}
+
+
+.carousel-menu-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-menu-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #000;
+    border: none;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-menu-button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.carousel-menu-button-prev {
+    left: 10px;
+}
+
+.carousel-menu-button-next {
+    right: 10px;
+}

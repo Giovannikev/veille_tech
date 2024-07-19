@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% for dish in dishes %}
+    <p>{{ dish.name }} - {{ dish.price }} €</p>
+    <a href="{% url 'dish-update' dish.pk %}">Modifier</a>
+    <a href="{% url 'dish-delete' dish.pk %}">Supprimer</a>
+  {% endfor %}
+  <a href="{% url 'dish-create' %}">Ajouter un nouveau plat</a>
+{% endblock %}

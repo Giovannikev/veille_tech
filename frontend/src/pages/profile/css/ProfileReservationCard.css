@@ -1,0 +1,101 @@
+.reservation-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.233);
+    display: flex;
+    align-items: center;
+}
+
+.restaurant-reservation-image {
+    width: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+.reservation-details {
+    padding: 20px;
+    flex: 1;
+}
+
+.reservation-details h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.reservation-info {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.reservation-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-reservation {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.btn-reservation-primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-reservation-secondary {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.btn-reservation-danger {
+    background-color: #E74C3C;
+    color: white;
+}
+
+.btn-reservation:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+
+@media (max-width: 768px) {
+    .main-content-profile {
+        flex-direction: column;
+    }
+
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .user-name {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .reservation-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .restaurant-reservation-image {
+        margin-left: 0;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .reservation-actions {
+        justify-content: center;
+    }
+}

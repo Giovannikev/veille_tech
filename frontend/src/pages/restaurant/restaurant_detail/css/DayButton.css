@@ -1,0 +1,73 @@
+.week-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    max-width: 100%;
+    background: linear-gradient(135deg, var(--secondary), #ffa76d 100%);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+
+.day-button {
+    flex: 1;
+    min-width: 60px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    color: #4a5568;
+    background-color: #edf2f7;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.day-button:hover {
+    background-color: #e2e8f0;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.day-button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.day-button.active {
+    background-color: var(--primary);
+    color: #ffffff;
+}
+
+@media (max-width: 600px) {
+    .week-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .day-button {
+        width: 100%;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .week-container {
+        max-width: 90%;
+    }
+
+    .day-button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (min-width: 901px) {
+    .week-container {
+        max-width: 800px;
+    }
+}

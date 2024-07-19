@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="container">
+    <h1>Mes Réservations</h1>
+    {% if reservations %}
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Restaurant</th>
+            <th>Date</th>
+            <th>Heure</th>
+            <th>Personnes</th>
+            <th>Statut</th>
+            <th>Demandes spéciales</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for reservation in reservations %}
+            <tr>
+              <td>{{ reservation.restaurant.name }}</td>
+              <td>{{ reservation.reservation_date }}</td>
+              <td>{{ reservation.reservation_time }}</td>
+              <td>{{ reservation.number_of_people }}</td>
+              <td>{{ reservation.get_status_display }}</td>
+              <td>{{ reservation.special_requests }}</td>
+              <td>
+                <a href="{% url 'reservation-cancel' reservation.id %}" class="btn btn-danger">Annuler</a>
+                <a href="{% url 'reservation-update' reservation.id %}" class="btn btn-success">Modifier</a>
+                {% if reservation.status != 'confirmed' %}
+                  <a href="{% url 'reservation-ticket' reservation.id %}" class="btn btn-primary">Confirmer</a>
+                {% else %}
+                  <a href="{% url 'reservation-ticket' reservation.id %}" class="btn btn-outline-primary">Voir le ticket</a>
+                {% endif %}
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>Vous n'avez aucune réservation.</p>
+    {% endif %}
+  </div>
+{% endblock %}

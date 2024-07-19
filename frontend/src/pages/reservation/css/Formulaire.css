@@ -1,0 +1,73 @@
+.reservation-image {
+    object-fit: cover;
+    height: 300px;
+}
+
+.reservation-form {
+    line-height: 1.6;
+    color: #14213d;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    font-size: xx-large;
+}
+
+.reservation-title {
+    font-family: "Londrina Solid";
+    color: var(--primary);
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.reservation-subtitle {
+    font-family: "Londrina Solid";
+    color: var(--primary);
+    font-size: 1.6rem;
+}
+
+.reservation-form-group {
+    margin: 20px 10px;
+    font-weight: 600;
+
+    font-size: 1rem;
+}
+
+.reservation-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+.reservation-form-group input[type="url"],
+.reservation-form-group input[type="text"],
+.reservation-form-group input[type="email"],
+.reservation-form-group input[type="email"],
+.reservation-form-group input[type="tel"],
+.reservation-form-group input[type="number"],
+.reservation-form-group input[type="datetime-local"],
+.reservation-form-group textarea,
+.reservation-form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.reservation-form-group input:disabled {
+    color: grey;
+}
+
+.button-form-centered {
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.error {
+    color: #e74c3c;
+    font-size: 0.9em;
+    margin-top: 5px;
+}

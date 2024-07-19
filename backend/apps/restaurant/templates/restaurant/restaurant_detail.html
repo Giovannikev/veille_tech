@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <style>
+    .card-img-top {
+      height: 460px;
+    }
+  </style>
+  <div class="card mb-4 shadow-sm">
+    {% if restaurant.main_image %}
+      <img src="{{ restaurant.main_image.url }}" class="card-img-top" alt="Image de {{ restaurant.name }}" />
+    {% endif %}
+    <div class="row">
+      {% for image in restaurant.secondary_images.all %}
+        <div class="col-md-3">
+          <img src="{{ image.image.url }}" class="img-thumbnail" alt="Image secondaire de {{ restaurant.name }}" />
+        </div>
+      {% endfor %}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{ restaurant.name }}</h5>
+      <p class="card-text">
+        <strong>Adresse:</strong> {{ restaurant.address }}<br />
+        <strong>Description:</strong> {{ restaurant.description }}<br />
+        <strong>Heures d'ouverture:</strong> {{ restaurant.opening_time }} - {{ restaurant.closing_time }}<br />
+        <strong>Jours d'ouverture:</strong> {{ restaurant.get_opening_days_display }}<br />
+        <strong>Spécialité:</strong> {{ restaurant.speciality }}<br />
+        <strong>Note:</strong> {{ restaurant.rating }}
+      </p>
+      <h5>Images secondaires</h5>
+
+      <a href="{% url 'restaurant-list' %}" class="btn btn-secondary mt-3">Retour à la liste</a>
+      <a href="{% url 'reservation-restaurant' restaurant.pk %}" class="btn btn-secondary mt-3">Faire une reservation</a>
+    </div>
+  </div>
+{% endblock %}
